@@ -13,5 +13,5 @@ Spechifiche:
 
 ---
 ## 🛡️ Licenza
-Questo progetto è soggetto alla [MIT License](License).
+Questo progetto è soggetto alla [MIT License](LICENSE).
 
