@@ -15,11 +15,19 @@ Sviluppare un moderno data warehouse utilizzando SQL Server per consolidare dati
 
 ---
 
+**Fasi del Progetto**: Il [link](https://www.notion.so/Progetto-del-SQL-Data-Warehouse-2d1112e6dcd680fdbffcc77916e12b8c?source=copy_link) per tutte le fasi e attività del progetto.
+
+---
+
 ## 🏗️ L'architettura del Data Warehouse
 
 L'architettura dei dati per questo progetto segue i livelli **Bronze**, **Silver** e **Gold** dell'architettura Medallion.
 
+![L'architettura dei dati](docs/data_architecture.png)
 
+1. **Bronze Layer**: Archivia raw data così come sono dai sistemi di origine. I dati vengono importati da file CSV nel database SQL server.
+2. **Silver Layer**: Questo livello include processi di pulizia, standardizzazione e normalizzazione dei dati per prepararli all'analisi.
+3.  **Gold Layer**: Contiene i dati pronti per l'uso, modellati in uno schema a stella, necessario per la reportistica e l'analisi.
 
 ## 🛡️ Licenza
 Questo progetto è distribuito sotto **licenza MIT**. Consultare il file [LICENSE](LICENSE) per i dettagli.
