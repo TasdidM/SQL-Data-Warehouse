@@ -3,7 +3,7 @@
 ## 🚀 I Requisiti del Progetto
 **Obiettivi**
 
-Sviluppare un moderno **data warehouse** utilizzando SQL Server per consolidare dati di vendita, consentendo report analitici e il processo decisionale informato.
+Sviluppare un moderno **Data Warehouse** utilizzando SQL Server per consolidare dati di vendita, consentendo report analitici e il processo decisionale informato.
 
 **Spechifiche**
 
