@@ -91,9 +91,9 @@ IF OBJECT_ID('bronze.px_cat_g1v2', 'U') IS NOT NULL
 GO
 -- Crea la tabella per il file 'PX_CAT_G1V2.csv' dal sistema ERP
 CREATE TABLE bronze.px_cat_g1v2 (
-    id NVARCHAR(50),
-    cat NVARCHAR(50),
-    subcat NVARCHAR(50),
+    id          NVARCHAR(50),
+    cat         NVARCHAR(50),
+    subcat      NVARCHAR(50),
     maintenance NVARCHAR(50)
 );
 
