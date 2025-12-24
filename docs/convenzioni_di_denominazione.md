@@ -4,7 +4,9 @@ Questo documento descrive le convenzioni di denominazione utilizzate per schemi,
 ## Indice
 
 1. [Principi Generali](#principi-generali)
-2. [Convenzioni di Denominazione delle Tabelle](convezioni-di-denominazione-delle-tabelle)
+2. [Convenzioni di Denominazione delle Tabelle](#convezioni-di-denominazione-delle-tabelle)
+3. [Convenzioni di Denominazione delle Colonne](#convezioni-di-denominazione-delle-colonne)
+4. [Stored Procedure](#stored-procedure)
 
 ## Principi Generali
 
