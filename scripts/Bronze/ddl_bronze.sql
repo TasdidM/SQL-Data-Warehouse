@@ -86,11 +86,11 @@ CREATE TABLE bronze.erp_loc_a101 (
 GO
 
 -- Elimina la tabella se esiste già
-IF OBJECT_ID('bronze.px_cat_g1v2', 'U') IS NOT NULL
-    DROP TABLE bronze.px_cat_g1v2;
+IF OBJECT_ID('bronze.erp_px_cat_g1v2', 'U') IS NOT NULL
+    DROP TABLE bronze.erp_px_cat_g1v2;
 GO
 -- Crea la tabella per il file 'PX_CAT_G1V2.csv' dal sistema ERP
-CREATE TABLE bronze.px_cat_g1v2 (
+CREATE TABLE bronze.erp_px_cat_g1v2 (
     id          NVARCHAR(50),
     cat         NVARCHAR(50),
     subcat      NVARCHAR(50),
