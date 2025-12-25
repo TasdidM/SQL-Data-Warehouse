@@ -1,4 +1,23 @@
--- Crea la procedura archiviata
+/*
+===========================================================================================
+Stored Procedure: Carica il Livello Bronze
+===========================================================================================
+Scopo dello script: 
+    Questo Stored Procedure carica i dati nello schema 'bronze' da file CSV esterni.
+    Esegue le seguenti azioni:
+        - Troncamento delle tabelle bronze prima di caricare i dati.
+        - Utilizza il comando 'BULK INSERT' per caricare i dati dai file CSV nelle tabelle 
+          bronze.
+Parametri:
+    Nessuno.
+        - Questo Stored Procedure non accetta alcun parametro né restituisce alcun valore.
+
+Esempio di utilizzo:
+    EXEC bronze.load_bronze;
+============================================================================================
+*/
+
+-- Crea lo Stored Procedure
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
     DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
