@@ -1,6 +1,6 @@
 /*
 ===========================================================================================
-Stored Procedure: Carica il Livello Bronze
+Stored Procedure: Carica il Livello Bronze (Sorgente -> Bronze)
 ===========================================================================================
 Scopo dello script: 
     Questo Stored Procedure carica i dati nello schema 'bronze' da file CSV esterni.
