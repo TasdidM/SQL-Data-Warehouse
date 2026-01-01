@@ -1,1 +1,27 @@
+# Catalogo Dati per Gold Layer
 
+## Sintesi
+Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata per supportare casi d'uso analitici e di reporting. È costituito da tabelle di dimensioni e di fatti per metriche aziendale spechifice.
+
+------------------
+
+### 1. gold.dim_customers
+- **Scopo**: Contiene i dettagli dei clienti arricchiti con dati demografici e geografici.
+- **Colonne**:
+
+| Nome Colonna       | Tipo dei dati   | Descrizione
+|--------------------|-----------------|----------------------------------------------|
+| `customer_key`     | INT             | Chiave surrogata che indentifica in modo unico ogni record cliente nella tabella delle dimensioni.
+| `customer_id`      | INT             | Identificativo numerico unico assegnato a ciascun cliente.
+| `customer_number`  | NVARCHAR(50)    | Indentificatore alfanumerico che rappresenta il cliente, utilizzato per il tracciamento e il riferimento.
+| `first_name`       | NVARCHAR(50)    | Il nome del cliente, come registrato nel sistema.
+| `last_name`        | NVARCHAR(50)    | Il cognome del cliente.
+| `country`          | NVARCHAR(50)    | Il paese di residenza del cliente (ad.es. 'Australia').
+| `marital_status`   | NVARCHAR(50)    | Lo stato civile del cliente (ad.es. 'Married', 'Single').
+| `gender`           | NVARCHAR(50)    | Il genere del cliente (ad.es. 'Male', 'Female').
+| `birth_date`       | DATE            | La data di nascita del cliente, nel formato YYYY-MM-DD.
+| `create_date`      | DATE            | La data in cui è stato creato il record del cliente nel sistema.
+
+### 2. gold.dim_products
+- **Scopo**: Fornisce informazioni sui prodotti e sulle loro caratteristiche.
+- **Colonne**:
