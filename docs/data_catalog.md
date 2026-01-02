@@ -26,7 +26,7 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 - **Scopo**: Fornisce informazioni sui prodotti e sulle loro caratteristiche.
 - **Colonne**:
 
-| Nome Colonna       | Tipo dei dati   | Descrizione
+| Nome di Colonna    | Tipo dei dati   | Descrizione
 |--------------------|-----------------|----------------------------------------------|
 | `prdocut_key`      | INT             | Chiave surrogata che identifica in modo unico ogni record di prodotto nella tabella delle dimensioni dei prodotti.
 | `product_id`       | INT             | Identificatore unico assegnato al prodotto per il tracciamento interno e il riferimento.
@@ -44,7 +44,7 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 - **Scopo**: Registra i dati relativi alle transazioni di vendita a fini analitici.
 - **Colonne**:
 
-| Nome Colonna       | Tipo dei dati   | Descrizione
+| Nome di Colonna    | Tipo dei dati   | Descrizione
 |--------------------|-----------------|----------------------------------------------|
 
 
