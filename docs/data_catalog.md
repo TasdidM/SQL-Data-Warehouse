@@ -22,6 +22,8 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 | `birth_date`       | DATE            | La data di nascita del cliente, nel formato YYYY-MM-DD.
 | `create_date`      | DATE            | La data in cui è stato creato il record del cliente nel sistema.
 
+--------------------
+
 ### 2. gold.dim_products
 - **Scopo**: Fornisce informazioni sui prodotti e sulle loro caratteristiche.
 - **Colonne**:
@@ -39,6 +41,8 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 | `cost`             | INT             | Il costo o il prezzo base del prodotto, valutato in unità monetarie.
 | `product_line`     | NVARCHAR(50)    | La linea o serie del prodotto specifico a cui lo appartiene.
 | `start_date`       | DATE            | La data in cui il prodotto è stato messo in vendita con il relativo prezzo.
+
+--------------------
 
 ### 3. gold.fact_sales
 - **Scopo**: Registra i dati relativi alle transazioni di vendita a fini analitici.
