@@ -1,6 +1,6 @@
 # Catalogo Dati per Gold Layer
 
-## Sintesi
+## Panoramica
 Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata per supportare casi d'uso analitici e di reporting. È costituito da tabelle di dimensioni e di fatti per metriche aziendale spechifice.
 
 ------------------
@@ -46,7 +46,15 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 
 | Nome di Colonna    | Tipo dei dati   | Descrizione
 |--------------------|-----------------|----------------------------------------------|
-
+| `order_number`     | NVARCHAR(50)    | Identificatore alfanumerico unico per ogni ordine di vendita.
+| `product_key`      | INT             | Chiave surrogata che collega l'ordine alla tabella delle dimensioni del prodotto.
+| `customer_key`     | INT             | Chiave surrogata che collega l'ordine alla tabella delle dimensioni del cliente.
+| `order_date`       | DATE            | La data in cui è stato effettuato l'ordine.
+| `shipping_date`    | DATE            | La data in cui l'ordine è stato spedito al cliente.
+| `due_date`         | DATE            | La data in cui era previsto il pagamento dell'ordine.
+| `sales_amount`     | INT             | Il valore monetario totale della vendita, in unità monetarie intere.
+| `quantity`         | INT             | Il numero di pezzi del prodotto sono ordinati.
+| `price`            | INT             | Il prezzo unitario del prodotto, in unità monetarie intere.
 
 
 
