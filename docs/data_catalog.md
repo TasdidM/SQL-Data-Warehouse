@@ -9,9 +9,9 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 - **Scopo**: Contiene i dettagli dei clienti arricchiti con dati demografici e geografici.
 - **Colonne**:
 
-| Nome Colonna       | Tipo dei dati   | Descrizione
+| Nome di Colonna    | Tipo dei dati   | Descrizione
 |--------------------|-----------------|----------------------------------------------|
-| `customer_key`     | INT             | Chiave surrogata che indentifica in modo unico ogni record cliente nella tabella delle dimensioni.
+| `customer_key`     | INT             | Chiave surrogata che indentifica in modo unico ogni record cliente nella tabella delle dimensioni dei clienti.
 | `customer_id`      | INT             | Identificativo numerico unico assegnato a ciascun cliente.
 | `customer_number`  | NVARCHAR(50)    | Indentificatore alfanumerico che rappresenta il cliente, utilizzato per il tracciamento e il riferimento.
 | `first_name`       | NVARCHAR(50)    | Il nome del cliente, come registrato nel sistema.
@@ -25,3 +25,50 @@ Il Gold Layer è la rappresentazione dei dati a livello aziendale, strutturata p
 ### 2. gold.dim_products
 - **Scopo**: Fornisce informazioni sui prodotti e sulle loro caratteristiche.
 - **Colonne**:
+
+| Nome Colonna       | Tipo dei dati   | Descrizione
+|--------------------|-----------------|----------------------------------------------|
+| `prdocut_key`      | INT             | Chiave surrogata che identifica in modo unico ogni record di prodotto nella tabella delle dimensioni dei prodotti.
+| `product_id`       | INT             | Identificatore unico assegnato al prodotto per il tracciamento interno e il riferimento.
+| `product_number`   | NVARCHAR(50)    | Codice alfanumerico strutturato che rappresenta il prodotto, spesso utilizzto per la categorizzazione o l'inventario.
+| `product_name`     | NVARCHAR(50)    | Nome descrittivo del prodotto, inclusi dettagli chiave come tipo, colore e dimensioni.
+| `category_id`      | NVARCHAR(50)    | Un identificatore unico per la categoria del prodotto, collegato alla sua classificazione di alto livello.
+| `category`         | NVARCHAR(50)    | La classificazione più generica del prodotto (ad. es. Bikes, Components) per raggruppare articoli correlati.
+| `subcategory`      | NVARCHAR(50)    | Classificazione più dettagliata del prodotto all'interno della categoria, come il tipo di prodotto.
+| `maintenance`      | NVARCHAR(50)    | Indica se il prodotto richiede manutenzione (ad. es. Yes, No).
+| `cost`             | INT             | Il costo o il prezzo base del prodotto, valutato in unità monetarie.
+| `product_line`     | NVARCHAR(50)    | La linea o serie del prodotto specifico a cui lo appartiene.
+| `start_date`       | DATE            | La data in cui il prodotto è stato messo in vendita con il relativo prezzo.
+
+### 3. gold.fact_sales
+- **Scopo**: Registra i dati relativi alle transazioni di vendita a fini analitici.
+- **Colonne**:
+
+| Nome Colonna       | Tipo dei dati   | Descrizione
+|--------------------|-----------------|----------------------------------------------|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
