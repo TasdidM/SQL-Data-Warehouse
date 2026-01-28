@@ -18,7 +18,7 @@ IF OBJECT_ID('silver.crm_cust_info', 'U') IS NOT NULL
     DROP TABLE silver.crm_cust_info;
 GO
 -- Crea la tabella per il file 'cust_info.csv' dal sistema CRM
-CREATE TABLE silver.crm_prd_info (
+CREATE TABLE silver.crm_cust_info (
     prd_id              INT,
     cat_id              NVARCHAR(50),
     prd_key             NVARCHAR(50),
