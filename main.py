@@ -1,10 +1,11 @@
-import pyodbc
-import os
-from dotenv import load_dotenv
+# import pyodbc
+# import os
+# from dotenv import load_dotenv
 
-# carica variabile d'ambiente da .env file
-load_dotenv()
+# # carica variabile d'ambiente da .env file
+# load_dotenv()
 
+<<<<<<< HEAD
 params = {
     'crm_cust_info': os.path.abspath("datasets\source_crm\cust_info.csv"),
     'crm_prd_info': os.path.abspath('datasets\source_crm\prd_info.csv'),
@@ -81,3 +82,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+=======
+# # Ottiene i dettagli della connessione dalle variabili d'ambiente
+# server = os.getenv("SQL_SERVER")
+# database = os.getenv("SQL_DATABASE")
+
+# # Stringa di connessione per l'autenticazione di SQL Server
+# connection_string = f"DRIVER={{ODBC Driver 17 for SQL Server}};SERVER={server};DATABASE={database};Trusted_Connection=yes"
+
+# try:
+#     #stabilire la connessione
+#     conn = pyodbc.connect(connection_string)
+#     cursor = conn.cursor()
+
+#     cursor.execute("SELECT @@VERSION")
+#     row = cursor.fetchone()
+#     print(f"Connected! SQL Server version: {row[0]}")
+
+#     cursor.close()
+#     conn.close()
+# except pyodbc.Error as e:
+#     print(f"Errore durante la connessione a SQL Server: {e}") 
+>>>>>>> 6bbb9d7af4967eb23accdb59bcd9a8cebd0e0b75
