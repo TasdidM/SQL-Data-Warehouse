@@ -18,8 +18,8 @@ ATTENZAIONE:
 
 
 -- Utilizzare il master database
-USE master;
-GO
+--USE master;
+--GO
 
 -- Elimina e recrea se esiste il database 'data_warehouse'
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'data_warehouse')

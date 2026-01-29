@@ -21,6 +21,7 @@ Esempio dell'utilizzo:
 
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
+    SET NOCOUNT ON;
     DECLARE @start_time DATETIME,
             @end_time DATETIME,
             @batch_start_time DATETIME,

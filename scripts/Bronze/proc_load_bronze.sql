@@ -19,6 +19,7 @@ Esempio di utilizzo:
 -- Crea lo Stored Procedure
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
+    SET NOCOUNT ON;
     DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
     BEGIN TRY
         
@@ -34,10 +35,10 @@ BEGIN
 
         SET @start_Time = GETDATE();
         -- Elimina tutti i dati nella tabella di crm_cust_info
-        PRINT '>> Trancating la Tabella: bronze.crm_cust_info'
+        PRINT '>> Trancating la Tabella: bronze.crm_cust_info';
         TRUNCATE TABLE bronze.crm_cust_info;
         -- Caricamento pieno da file 'cust_info.csv'
-        PRINT '>> Inserimento di Dati in: bronze.crm_cust_info'
+        PRINT '>> Inserimento di Dati in: bronze.crm_cust_info';
         BULK INSERT bronze.crm_cust_info
         FROM '{crm_cust_info}'
         WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', TABLOCK);
@@ -81,10 +82,10 @@ BEGIN
 
         SET @start_Time = GETDATE();
         -- Elimina tutti i dati nella tabella di erp_cust_az12
-        PRINT '>> Trancating la Tabella: bronze.erp_cust_az12'
+        PRINT '>> Trancating la Tabella: bronze.erp_cust_az12';
         TRUNCATE TABLE bronze.erp_cust_az12;
         -- Caricamento pieno da file 'CUST_AZ12.csv'
-        PRINT '>> Inserimento di Dati in: bronze.erp_cust_az12'
+        PRINT '>> Inserimento di Dati in: bronze.erp_cust_az12';
         BULK INSERT bronze.erp_cust_az12
         FROM '{erp_cust_az12}'
         WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', TABLOCK);
@@ -114,7 +115,7 @@ BEGIN
         -- Caricamento pieno da file 'PX_CAT_G1V2.csv'
         PRINT '>> Inserimento di Dati in: bronze.erp_px_cat_g1v2'
         BULK INSERT bronze.erp_px_cat_g1v2
-        FROM '{erp_px_cat_g1v1}'
+        FROM '{erp_px_cat_g1v2}'
         WITH (FIRSTROW = 2, FIELDTERMINATOR = ',', TABLOCK);
         SET @end_time = GETDATE();
         PRINT '>> Durata del caricamento della tabella: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
